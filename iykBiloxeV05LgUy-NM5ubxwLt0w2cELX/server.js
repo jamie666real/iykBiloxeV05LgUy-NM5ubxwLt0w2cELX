@@ -67,7 +67,7 @@ http.createServer(async (req, res) => {
 
   const notice = r.ok
     ? `<p style="color:green;">Sent to ${esc(to)}.</p>`
-    : `<p style="color:red;">Error: ${esc(data.message || 'Send failed')}</p>`;
+    : `<p style="color:red;">Error: ${esc(data.message || 'Sending failed')}</p>`;
 
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end(page(notice));
